@@ -1,4 +1,6 @@
-#code is a slightly modified version of Phil Wang's ROPE code https://github.com/lucidrains/rotary-embedding-torch
+#A very slightly modified version of Phil Wang's ROPE code
+#https://github.com/lucidrains/rotary-embedding-torch
+
 from math import pi, log
 
 import torch
