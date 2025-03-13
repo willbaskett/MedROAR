@@ -1,7 +1,7 @@
 # MedROAR
 MedROAR is multi-modal embedding model for medical records which hierarchically clusters patients based on whatever records are avalible at the time. It is intended to identify what clinical subgroup a patient falls into without requiring comprehensive patient records which may not be avalible. Identifying a patient's clinical subgroup allows for improved personalized treatment which can improve clinical outcomes.
 
-![Clusters Of Patients Who Will Die In The Future Found by MedROAR](resources/clusters.png)
+![Clusters Of Patients Who Will Die In The Future Found by MedROAR](resources/cluster.png)
 
 # Description
 MedROAR is a transformer-based autoencoder intended for use with tabular and time-series medical records. It produces hierarchical binary embeddings which naturally hierarchical cluster patients. This naturally identifies subgroups of patients who share high-level similarities. It utilizes a Random Order AutoRegressive (ROAR) decoder to learn complex dependencies between different types of records. MedROAR features specialized modifications to allow it to better handle the unique requirements inherent to medical records, specifically temporal sparseness and the large number of different record types.
