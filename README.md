@@ -13,7 +13,7 @@ As the Position element of each token can be multi-dimensional, MedROAR can pote
 
 ![MedROAR Attention](resources/figure_2_attention.png)
 
-The encoder produces a hierarchical binary embedding where each additional bit seeks to improve the decoders predictions by as much as possible. This semantically partitions patients into a binary tree where each bifurcation represents some high-level difference between their clinical status. Nodes in this tree are clusters. Higher-level clusters capture broader, less specific traits and contain more patients, whereas lower-level clusters focus on detailed, specific criteria but contain fewer patients. Each cluster is discrete and therefore well defined, enabling the use of conventional statistical methods to quantify uncertainty and calculate confidence intervals for the properties of each patient subgroup.
+The MedROAR encoder produces a hierarchical binary embedding where each additional bit seeks to improve the decoders predictions by as much as possible. This semantically partitions patients into a binary tree where each bifurcation represents some high-level difference between their clinical status. Nodes in this tree are clusters. Higher-level clusters capture broader, less specific traits and contain more patients, whereas lower-level clusters focus on detailed, specific criteria but contain fewer patients. Each cluster is discrete and therefore well defined, enabling the use of conventional statistical methods to quantify uncertainty and calculate confidence intervals for the properties of each patient subgroup.
 
 ![MedROAR Hierarchical Binary Embeddings](resources/figure_3_translation.png)
 
