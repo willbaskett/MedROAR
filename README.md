@@ -19,6 +19,7 @@ The MedROAR encoder produces a hierarchical binary embedding where each addition
 
 # Tabular Data Only: MedROAR vs Agglomerative Clustering Using Patient Information From the SPARK Autism Dataset
 ### MedROAR's learning objective allows it to find patients clustered by high-level similarity. This typically produces more cohesive clusters than distance based methods. This makes it useful even when the data is purely tabular, without any time-series information.
+The clusters below show clusters of ASD individuals with different levels of language deficiencies 
 ![Agglomerative Clustering vs MedROAR](resources/figure_4_language.png)
 
 ### More Autism Phenotype Subgroups
