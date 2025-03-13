@@ -23,7 +23,7 @@ The encoder produces a hierarchical binary embedding where each additional bit s
 ![ASD Subgroups](resources/figure_5_asd_clusters.png)
 
 # Resilience to Missing Information: Mixed Time-Series and Tabular EHR Data
-### MedROAR is designed to accurately identify patient subgroup using however much patient information is avalible. Note the similarities between clusters identified using only the first hour of patient data after admission and the first eight hours.
+### MedROAR is designed to accurately identify patient subgroup using however much patient information is avalible. Note the similarities between clusters of stroke patients identified using only the first hour of patient data after admission and the first eight hours.
 ![Resilience to Missing Information Med-ROAR](resources/figure_6_missing_info.png)
 
 # Usage
