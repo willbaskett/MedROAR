@@ -26,7 +26,7 @@ The MedROAR encoder produces a hierarchical binary embedding where each addition
 
 # Resilience to Missing Information: Mixed Time-Series and Tabular EHR Data
 MedROAR is designed to accurately identify patient subgroup using however much patient information is avalible. Note the similarities between clusters of stroke patients identified using only the first hour of patient data after admission and those identified using first eight hours.
-![Resilience to Missing Information Med-ROAR](resources/figure_6_missing_info.png)
+![Resilience to Missing Information Med-ROAR](resources/figure_6_missing_information.png)
 
 # Usage
 See the [data preparation](data_prepare.ipynb) and [MedROAR training/usage](MedROAR_demo.ipynb) demo notebooks for an illustrated version of how to prepare data, train, and run MedROAR models. The demo notebook uses MIMIC-IV. You will need to request access for this yourself and download the .zip
