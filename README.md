@@ -1,5 +1,5 @@
 # MedROAR
-MedROAR is multi-modal embedding model for medical records. It hierarchically clusters patients based on whatever patient records may be avalible. It is intended to identify a patient's clinical subgroup without requiring comprehensive patient records, which may not be avalible. Identifying a patient's clinical subgroup allows for improved personalized treatment which can improve clinical outcomes.
+MedROAR is multi-modal embedding model for medical records. It hierarchically clusters patients based on whatever patient records may be avalible. It is intended to identify a patient's clinical subgroup without requiring comprehensive patient records, which may not be avalible. Identifying a patient's clinical subgroup allows for more personalized treatment which can improve clinical outcomes.
 
 ![Clusters Of Patients Who Will Die In The Future Found by MedROAR](resources/cluster.png)
 
