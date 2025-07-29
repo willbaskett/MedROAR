@@ -1,4 +1,7 @@
 # MedROAR
+
+![Published as "Identifying homogenous patient subgroups using transformer based hierarchical clustering of heterogeneous Mixed-Modality medical data" in the Journal of Biomedical Informatics (JBI) 2025.](https://doi.org/10.1016/j.jbi.2025.104878)
+
 MedROAR is multi-modal embedding model for medical records. It hierarchically clusters patients based on whatever patient records may be available. It is intended to identify a patient's clinical subgroup without requiring comprehensive records, which may not exist. Identifying a patient's clinical subgroup allows for more personalized treatment which can improve clinical outcomes. MedROAR provides a unified method for hierarchically clustering medical records from multiple data modalities while also clustering patients in a way that is resilient to missing information.
 
 ![Clusters Of Patients Who Will Die In The Future Found by MedROAR](resources/cluster.png)
