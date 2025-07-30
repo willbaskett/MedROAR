@@ -38,4 +38,4 @@ MedROAR is designed to accurately identify patient subgroup using however much p
 _Figure 6 Patient subgroups remain broadly consistent as the amount of information available changes. First 8 tree bifurcations shown for readability._
 
 # Usage
-See the [data preparation](data_prepare.ipynb) and [MedROAR training/usage](MedROAR_demo.ipynb) demo notebooks for an illustrated version of how to prepare data, train, and run MedROAR models. The demo notebook uses MIMIC-IV. You will need to request access for this yourself and download the .zip
+See the [data preparation](prepare_data.ipynb) and [MedROAR training/usage](MedROAR_demo.ipynb) demo notebooks for an illustrated version of how to prepare data, train, and run MedROAR models. The demo notebook uses MIMIC-IV. You will need to request access for this yourself and download the .zip
