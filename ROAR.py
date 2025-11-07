@@ -357,8 +357,8 @@ class DecoderLayer(nn.Module):
         q_embed, k_embed = self.type_embedding(x_type).split(self.d_model, dim=2)
 
         #Encodings of type are offset for queries/keys in the decoder. See above note.
-        q = q + q_embed[:,:-1]
-        k = k + k_embed[:,1:]
+        k = k + k_embed[:,:-1]
+        q = q + q_embed[:,1:]
         k = k.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
         q = q.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
         v = v.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
@@ -366,8 +366,8 @@ class DecoderLayer(nn.Module):
         
         #Encodings of position are offset for queries/keys in the decoder. See above note.
         for i, s in enumerate(seq_order):
-            q[:,:,:,self.dim_per_rope*i:self.dim_per_rope*(i+1)] = self.rotary_emb.rotate_queries_or_keys(q[:,:,:,self.dim_per_rope*i:self.dim_per_rope*(i+1)], seq_order=s[:,:-1].unsqueeze(1))
-            k[:,:,:,self.dim_per_rope*i:self.dim_per_rope*(i+1)] = self.rotary_emb.rotate_queries_or_keys(k[:,:,:,self.dim_per_rope*i:self.dim_per_rope*(i+1)], seq_order=s[:,1:].unsqueeze(1))
+            k[:,:,:,self.dim_per_rope*i:self.dim_per_rope*(i+1)] = self.rotary_emb.rotate_queries_or_keys(k[:,:,:,self.dim_per_rope*i:self.dim_per_rope*(i+1)], seq_order=s[:,:-1].unsqueeze(1))
+            q[:,:,:,self.dim_per_rope*i:self.dim_per_rope*(i+1)] = self.rotary_emb.rotate_queries_or_keys(q[:,:,:,self.dim_per_rope*i:self.dim_per_rope*(i+1)], seq_order=s[:,1:].unsqueeze(1))
 
         #Flash attention
         attn_output = F.scaled_dot_product_attention(q, k, v, is_causal=True).transpose(1, 2).contiguous().view(B, T, C)
@@ -524,4 +524,5 @@ class MedROAR(nn.Module):
         decoder_type, decoder_value, decoder_seq_order = decoder_input
         out = self.decoder(decoder_type, decoder_value, decoder_seq_order, enc, num_allowed_nodes=num_allowed_nodes)
         
+
         return enc, out
